@@ -15,7 +15,8 @@ public class ChatController {
 	@SendTo("/topic/guestchats") // map handler to subscription queue/topic for message sending and receival
 	public ChatOutMessage handleMessage(ChatInMessage message) throws Exception {
 		// when a message is received, the server broadcasts the response to subscribers of the topic
-		Thread.sleep(1000); // simulate server processing
+		// simulate server processing
+		Thread.sleep(1000); 
 		return new ChatOutMessage(message.getMessage());
 	}
 	
